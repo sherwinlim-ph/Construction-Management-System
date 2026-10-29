@@ -1,0 +1,85 @@
+/* Keep the brand and navigation clear at every screen size. */
+body {
+  margin: 0;
+  color: #17231f;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 22px 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #17231f;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 9px;
+  background: #e87936;
+  color: white;
+  letter-spacing: 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 30px;
+}
+
+.navbar nav a,
+.header-cta {
+  color: #34413d;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar nav a:hover {
+  color: #d9682a;
+}
+
+.header-cta {
+  padding: 12px 17px;
+  border-radius: 6px;
+  background: #17231f;
+  color: white;
+}
+
+.header-cta:hover {
+  background: #d9682a;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .navbar nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+  }
+}

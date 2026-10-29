@@ -1,0 +1,250 @@
+/* Landing page layout and responsive sections. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f4f0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  min-height: 570px;
+  align-items: center;
+  padding: 72px max(32px, calc((100% - 1136px) / 2));
+  background:
+    linear-gradient(90deg, rgb(13 27 26 / 88%), rgb(13 27 26 / 18%)),
+    url("../assets/construction-hero.png") center 55% / cover;
+  color: white;
+}
+
+.hero-copy {
+  max-width: 600px;
+}
+
+.project-card {
+  position: relative;
+  flex: 0 0 300px;
+  height: 390px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 55%);
+  border-radius: 10px;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 28%);
+  cursor: pointer;
+}
+
+.project-card:focus-visible {
+  outline: 3px solid #ffb078;
+  outline-offset: 4px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-card-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 48px 20px 20px;
+  background: linear-gradient(transparent, rgb(9 20 19 / 88%));
+  text-align: center;
+}
+
+.project-card-caption span {
+  color: #ffb078;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.project-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.project-pagination button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.project-pagination button.active {
+  background: #e87936;
+  border-color: #e87936;
+}
+
+.project-pagination button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) and (min-width: 701px) {
+  .hero {
+    gap: 24px;
+  }
+
+  .project-card {
+    flex-basis: 240px;
+    height: 340px;
+  }
+}
+
+.eyebrow {
+  color: #ffb078;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 580px;
+  margin: 18px 0;
+  font-size: clamp(42px, 6vw, 72px);
+  letter-spacing: -2.5px;
+  line-height: 1.02;
+}
+
+.hero p {
+  max-width: 470px;
+  color: #e0e6e2;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 19px;
+  border: 1px solid #e87936;
+  border-radius: 5px;
+  background: #e87936;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button.secondary {
+  border-color: rgb(255 255 255 / 55%);
+  background: transparent;
+}
+
+.button:hover {
+  background: #c85e25;
+}
+
+.features {
+  max-width: 1200px;
+  margin: auto;
+  padding: 82px 32px;
+}
+
+.section-heading {
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.section-heading h2 {
+  margin: 10px 0;
+  color: #17231f;
+  font-size: clamp(30px, 4vw, 42px);
+  letter-spacing: -1.2px;
+}
+
+.section-heading p,
+.feature-card p {
+  color: #64706b;
+  line-height: 1.7;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature-card {
+  padding: 26px;
+  border: 1px solid #e4e3de;
+  border-radius: 8px;
+  background: white;
+}
+
+.feature-card span {
+  color: #d9682a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.feature-card h3 {
+  margin: 16px 0 8px;
+  color: #17231f;
+  font-size: 19px;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.page-footer {
+  padding: 24px 32px;
+  background: #17231f;
+  color: #dfe5e1;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 36px;
+    min-height: 510px;
+    padding: 64px 24px;
+    background-position: 58% center;
+  }
+
+  .project-card {
+    flex-basis: auto;
+    width: min(100%, 360px);
+    height: 320px;
+    align-self: center;
+  }
+
+  .hero h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .features {
+    padding: 60px 24px;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
