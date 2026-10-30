@@ -11,7 +11,7 @@ require __DIR__ . '/includes/header.php';
             <h1>Build better projects, from the ground up.</h1>
             <p>Keep plans, progress, and people moving in the same direction with one clear view of your work.</p>
             <div class="hero-actions">
-                <a class="button" href="#features">Discover SkyBuild</a>
+                <a class="button" href="#">Discover SkyBuild</a>
                 <a class="button secondary" href="#contact">Get in touch</a>
             </div>
 
@@ -54,14 +54,14 @@ require __DIR__ . '/includes/header.php';
             </article>
         </div>
     </section>
+
 </main>
 
-<!-- Page footer. -->
-<footer class="page-footer" id="contact">SkyBuild · Plan clearly. Build confidently.</footer>
+<?php require __DIR__ . '/includes/footer.php'; ?>
 <!-- Switch the featured photo and caption when a pagination dot is selected. -->
  
 <script>
-    
+
     const projectCard = document.querySelector('.project-card');
     const projectImage = document.querySelector('#project-image');
     const projectCaption = document.querySelector('#project-caption');
@@ -110,5 +110,6 @@ require __DIR__ . '/includes/header.php';
         showNextProject();
     }, 5000);
 </script>
+
 </body>
 </html>
