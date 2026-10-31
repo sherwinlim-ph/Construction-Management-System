@@ -11,7 +11,7 @@ require __DIR__ . '/includes/header.php';
             <h1>Build better projects, from the ground up.</h1>
             <p>Keep plans, progress, and people moving in the same direction with one clear view of your work.</p>
             <div class="hero-actions">
-                <a class="button" href="#">Discover SkyBuild</a>
+                <a class="button" href="../presentation/clients/client_dashboard.php">Discover SkyBuild</a>
                 <a class="button secondary" href="#contact">Get in touch</a>
             </div>
 
