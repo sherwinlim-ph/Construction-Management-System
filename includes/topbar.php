@@ -25,21 +25,12 @@ require_once __DIR__ . '/../bootstrap.php';
 
       <ul class="nav-links">
         <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Product</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Project</a></li>
       </ul>
     </div>
 
     <!-- Right: Search & User Profile -->
     <div class="nav-right">
-      <div class="search-container">
-        <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-        </svg>
-        <input type="text" class="search-input" placeholder="Search">
-      </div>
-
       <div class="user-profile">
         <div class="avatar">
           <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Magda">

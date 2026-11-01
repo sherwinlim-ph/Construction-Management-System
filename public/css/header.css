@@ -6,20 +6,24 @@ body {
 }
 
 .navbar {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;         
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  max-width: 1200px;
-  margin: auto;
-  padding: 22px 32px;
+  padding: 26px max(32px, calc((100% - 1136px) / 2));
+  background: linear-gradient(180deg, rgb(13 27 26 / 65%), rgb(13 27 26 / 0%));
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #17231f;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 800;
   letter-spacing: 1.4px;
@@ -44,14 +48,14 @@ body {
 
 .navbar nav a,
 .header-cta {
-  color: #34413d;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
 }
 
 .navbar nav a:hover {
-  color: #d9682a;
+  color: #ffb078;
 }
 
 .header-cta {
@@ -69,7 +73,7 @@ body {
   .navbar {
     flex-wrap: wrap;
     gap: 16px;
-    padding: 16px 20px;
+    padding: 18px 20px;
   }
 
   .navbar nav {

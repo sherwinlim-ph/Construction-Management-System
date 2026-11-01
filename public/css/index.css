@@ -20,6 +20,7 @@ body {
   min-height: 570px;
   align-items: center;
   padding: 72px max(32px, calc((100% - 1136px) / 2));
+  padding-top: 200px;
   background:
     linear-gradient(90deg, rgb(13 27 26 / 88%), rgb(13 27 26 / 18%)),
     url("../assets/construction-hero.png") center 55% / cover;
@@ -238,6 +239,7 @@ body {
     gap: 36px;
     min-height: 510px;
     padding: 64px 24px;
+    padding-top: 210px;
     background-position: 58% center;
   }
 
