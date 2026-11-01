@@ -1,8 +1,10 @@
-/* Landing page layout and responsive sections. */
+
+/* ---- Base ------------------------------------------------------------- */
 * {
   box-sizing: border-box;
 }
 
+/* Smooth scrolling for the in-page anchor links (#features, #approach). */
 html {
   scroll-behavior: smooth;
 }
@@ -28,6 +30,7 @@ body {
   max-width: 600px;
 }
 
+/* ---- Image gallery card ------------------------------------------------ */
 .project-card {
   position: relative;
   flex: 0 0 300px;
@@ -39,6 +42,7 @@ body {
   cursor: pointer;
 }
 
+/* Focus ring for keyboard users (clickable card = needs a visible focus). */
 .project-card:focus-visible {
   outline: 3px solid #ffb078;
   outline-offset: 4px;
@@ -85,6 +89,7 @@ body {
   cursor: pointer;
 }
 
+/* Pagination dots under the caption; the active one is filled orange. */
 .project-pagination button.active {
   background: #e87936;
   border-color: #e87936;
@@ -95,6 +100,7 @@ body {
   outline-offset: 3px;
 }
 
+/* Tablet: shrink the gallery card so the hero text still has room. */
 @media (max-width: 900px) and (min-width: 701px) {
   .hero {
     gap: 24px;
@@ -105,6 +111,7 @@ body {
     height: 340px;
   }
 }
+
 
 .eyebrow {
   color: #ffb078;
@@ -136,6 +143,7 @@ body {
   margin-top: 30px;
 }
 
+/* ---- Buttons ----------------------------------------------------------- */
 .button {
   display: inline-block;
   padding: 14px 19px;
@@ -148,6 +156,7 @@ body {
   text-decoration: none;
 }
 
+/* "Get in touch" variant: outlined instead of solid. */
 .button.secondary {
   border-color: rgb(255 255 255 / 55%);
   background: transparent;
@@ -157,6 +166,8 @@ body {
   background: #c85e25;
 }
 
+/* ---- Features section --------------------------------------------------
+   3 equal columns that collapse to 1 column on mobile (see media query). */
 .features {
   max-width: 1200px;
   margin: auto;
@@ -211,6 +222,7 @@ body {
   font-size: 14px;
 }
 
+/* ---- Page footer bar ---------------------------------------------------- */
 .page-footer {
   padding: 24px 32px;
   background: #17231f;

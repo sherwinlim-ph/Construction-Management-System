@@ -141,6 +141,7 @@
   }
 }
 
+
 @media (max-width: 420px) {
   .footer-main {
     grid-template-columns: 1fr;

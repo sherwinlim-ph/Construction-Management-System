@@ -1,10 +1,21 @@
 <?php
+/**
+ * public/index.php — the site's landing page.
+ *
+ * This file is the "entry point": the browser requests it directly, so it must
+ * load the bootstrap FIRST. bootstrap.php defines every path/URL constant
+ * (ROOT_PATH, INCLUDES_PATH, CSS_URL, ...) used below.
+ */
+require_once __DIR__ . '/../bootstrap.php';   // __DIR__ = .../public, so /../ = project root
 
-// Load the shared page header.
-require __DIR__ . '/includes/header.php';
+// Pull in the shared <head> + opening <body> + site header.
+require INCLUDES_PATH . '/header.php';
 ?>
+
 <!-- Main landing page content. -->
 <main>
+
+    <!-- HERO: headline, call-to-action buttons, and the image card gallery. -->
     <section class="hero">
         <div class="hero-copy">
             <span class="eyebrow">Construction management, made clearer</span>
@@ -16,11 +27,12 @@ require __DIR__ . '/includes/header.php';
             </div>
 
         </div>
-        <!-- Featured development image card. -->
+        
         <article class="project-card" role="group" tabindex="0" aria-roledescription="carousel" aria-label="Project image gallery. Click or press Enter to show the next image.">
             <img id="project-image" src="./assets/featured-development.png" alt="Steel frame construction on an urban building site">
             <div class="project-card-caption">
                 <span id="project-caption">Featured development</span>
+                <!-- `active` marks the dot for the image currently shown. -->
                 <div class="project-pagination" role="group" aria-label="Choose a project image">
                     <button class="active" type="button" aria-label="Show image 1 of 3" aria-pressed="true" data-image="./assets/featured-development.png" data-alt="Steel frame construction on an urban building site" data-caption="Featured development"></button>
                     <button type="button" aria-label="Show image 2 of 3" aria-pressed="false" data-image="./assets/development-frame.png" data-alt="Concrete frame of a building under construction" data-caption="Building in progress"></button>
@@ -30,6 +42,7 @@ require __DIR__ . '/includes/header.php';
         </article>
     </section>
 
+    <!-- FEATURES: three short selling points in a responsive grid. -->
     <section class="features" id="features">
         <div class="section-heading" id="approach">
             <span class="eyebrow">A stronger way to work</span>
@@ -57,11 +70,13 @@ require __DIR__ . '/includes/header.php';
 
 </main>
 
-<?php require __DIR__ . '/includes/footer.php'; ?>
-<!-- Switch the featured photo and caption when a pagination dot is selected. -->
- 
-<script>
+<!-- load the footer -->
 
+<?php require INCLUDES_PATH . '/footer.php'; ?>
+
+<!-- Landing page behaviour: gallery card + automatic rotation. -->
+<script>
+    // Cache the elements the gallery needs to update.
     const projectCard = document.querySelector('.project-card');
     const projectImage = document.querySelector('#project-image');
     const projectCaption = document.querySelector('#project-caption');
