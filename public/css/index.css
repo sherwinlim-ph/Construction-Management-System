@@ -1,9 +1,5 @@
 
 /* ---- Base ------------------------------------------------------------- */
-* {
-  box-sizing: border-box;
-}
-
 /* Smooth scrolling for the in-page anchor links (#features, #approach). */
 html {
   scroll-behavior: smooth;

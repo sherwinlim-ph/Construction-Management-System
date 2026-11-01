@@ -1,0 +1,9 @@
+.main-container{
+  display: grid;
+  grid-template-columns: 244px 1fr;   /* sidebar | content */
+  grid-template-rows: auto 1fr;       /* topbar | rest */
+  min-height: 100vh;
+}
+
+.topbar-container{ grid-column: 1 / -1; }   /* topbar spans full width */
+.sidebar-container{ grid-row: 2; }

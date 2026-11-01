@@ -1,0 +1,66 @@
+/* Sidebar panel */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #075c68;
+  color: white;
+}
+
+/* Profile */
+.profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 18px;
+  background: #087482;
+}
+
+.profile img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.profile h3 {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.profile p {
+  font-size: 9px;
+  color: #d5e9eb;
+}
+
+.edit {
+  position: absolute;
+  top: 10px;
+  left: 56px;
+  font-size: 9px;
+  padding: 2px 5px;
+  color: white;
+  background: #075c68;
+  border: 1px solid #8bbac0;
+  border-radius: 3px;
+}
+
+/* Sidebar links */
+.sidebar nav {
+  padding: 16px 0;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 8px 22px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.sidebar nav a:hover {
+  background: #064f59;
+}

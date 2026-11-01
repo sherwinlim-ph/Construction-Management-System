@@ -14,7 +14,7 @@ require_once __DIR__ . '/../bootstrap.php';
     <link rel="stylesheet" href="<?= CSS_URL ?>index.css">
     <link rel="stylesheet" href="<?= CSS_URL ?>header.css">
     <link rel="stylesheet" href="<?= CSS_URL ?>footer.css">
-
+    <link
 </head>
 
 <body>
