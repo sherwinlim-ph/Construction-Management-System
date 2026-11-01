@@ -1,19 +1,11 @@
 <!-- Sidebar -->
 <aside class="sidebar">
   <div class="profile">
-    <img src="profile.png" alt="Profile">
-    <div>
-      <h3>Doe Hondrek</h3>
-      <p>● Business account</p>
-    </div>
-    <button class="edit">Edit</button>
+    <h3>Doe Hondrek</h3>
   </div>
 
   <nav>
-    <a href="#">Trips</a>
-    <a href="#">My Booking</a>
-    <a href="#">Reviews</a>
-    <a href="#">Wishlist</a>
-    <a href="#">Travel Guide</a>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
   </nav>
 </aside>
